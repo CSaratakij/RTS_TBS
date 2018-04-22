@@ -9,6 +9,8 @@ namespace LD41
     {
         const float WALK_TURN_COST = 3.0f;
         const float ATTACK_TURN_COST = 5.0f;
+        const float DASH_TURN_COST = 8.0f;
+
 
         [SerializeField]
         Status health;
@@ -52,6 +54,10 @@ namespace LD41
 
             if (Input.GetButtonDown("Attack")) {
                 turnCost.Remove(ATTACK_TURN_COST);
+            }
+
+            if (Input.GetButtonDown("Dash")) {
+                turnCost.Remove(DASH_TURN_COST);
             }
         }
 

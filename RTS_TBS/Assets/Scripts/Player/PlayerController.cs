@@ -10,9 +10,12 @@ namespace LD41
         [SerializeField]
         float moveForce;
 
+        [SerializeField]
+        float dashForce;
+
 
         bool isWalk;
-        bool isAttack;
+        bool isDash;
 
         Vector2 inputVector;
         Animator anim;
@@ -32,7 +35,13 @@ namespace LD41
 
         void FixedUpdate()
         {
-            rigid.velocity = (inputVector * moveForce);
+            if (isDash) {
+                rigid.AddForce(inputVector * dashForce, ForceMode2D.Impulse);
+                isDash = false;
+            }
+            else {
+                rigid.velocity = inputVector * moveForce;
+            }
         }
 
         void OnDisable()
@@ -57,13 +66,19 @@ namespace LD41
             }
 
             isWalk = (inputVector.magnitude > 0.0f);
-            isAttack = Input.GetButtonDown("Attack");
+
+            if (Input.GetButtonDown("Attack")) {
+                anim.Play("Attack");
+            }
+
+            if (Input.GetButtonDown("Dash")) {
+                isDash = true;
+            }
         }
 
         void _Animation_Handler()
         {
             anim.SetBool("isWalk", isWalk);
-            anim.SetBool("isAttack", isAttack);
         }
 
         void _Reset()
@@ -72,10 +87,7 @@ namespace LD41
             rigid.velocity = Vector2.zero;
 
             isWalk = false;
-            isAttack = false;
-
             anim.SetBool("isWalk", false);
-            anim.SetBool("isAttack", false);
         }
     }
 }
