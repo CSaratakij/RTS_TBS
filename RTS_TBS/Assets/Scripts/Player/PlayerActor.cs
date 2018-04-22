@@ -7,6 +7,9 @@ namespace LD41
     [RequireComponent(typeof(PlayerController))]
     public class PlayerActor : TurnActor
     {
+        const float WALK_TURN_COST = 3.0f;
+        const float ATTACK_TURN_COST = 5.0f;
+
         [SerializeField]
         Status health;
 
@@ -44,7 +47,11 @@ namespace LD41
             float inputY = Input.GetAxisRaw("Vertical");
 
             if ((inputX != 0.0f) || (inputY != 0.0f)) {
-                turnCost.Remove(3.0f * Time.deltaTime);
+                turnCost.Remove(WALK_TURN_COST * Time.deltaTime);
+            }
+
+            if (Input.GetButtonDown("Attack")) {
+                turnCost.Remove(ATTACK_TURN_COST);
             }
         }
 

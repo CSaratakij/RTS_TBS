@@ -11,6 +11,9 @@ namespace LD41
         float moveForce;
 
 
+        bool isWalk;
+        bool isAttack;
+
         Vector2 inputVector;
         Animator anim;
         Rigidbody2D rigid;
@@ -52,19 +55,27 @@ namespace LD41
             if (inputVector.magnitude > 1.0f) {
                 inputVector = inputVector.normalized;
             }
+
+            isWalk = (inputVector.magnitude > 0.0f);
+            isAttack = Input.GetButtonDown("Attack");
         }
 
         void _Animation_Handler()
         {
-            bool isWalk = (inputVector.magnitude > 0.0f);
             anim.SetBool("isWalk", isWalk);
+            anim.SetBool("isAttack", isAttack);
         }
 
         void _Reset()
         {
             inputVector = Vector2.zero;
             rigid.velocity = Vector2.zero;
+
+            isWalk = false;
+            isAttack = false;
+
             anim.SetBool("isWalk", false);
+            anim.SetBool("isAttack", false);
         }
     }
 }
