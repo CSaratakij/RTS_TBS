@@ -64,7 +64,7 @@
      <Compile Include="Assets\Scripts\Turnbase\TurnState.cs" />
      <Compile Include="Assets\Scripts\Turnbase\TurnStyle.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic.cs" />
-     <Compile Include="Assets\Scripts\UI\View\MainMenuView.cs" />
+     <Compile Include="Assets\Scripts\UI\View\GameMenuController.cs" />
      <Compile Include="Assets\Scripts\Utils\Timer.cs" />
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>

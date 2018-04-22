@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace LD41
 {
@@ -14,6 +13,12 @@ namespace LD41
         public void ExitGame()
         {
             Application.Quit();
+        }
+
+        public void Restart()
+        {
+            var currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
         }
     }
 }
