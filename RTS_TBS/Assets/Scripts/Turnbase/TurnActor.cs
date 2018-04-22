@@ -24,12 +24,10 @@ namespace LD41
 
         protected virtual void Awake()
         {
-            _Subscribe_Events();
         }
 
         protected virtual void OnDestroy()
         {
-            _Unsubscribe_Events();
         }
 
         protected virtual void Update()
@@ -54,21 +52,6 @@ namespace LD41
                 MakeTurn(false);
                 _FireEvent_OnTurnCostEmpty();
             }
-        }
-
-        protected virtual void _OnTurnEnded()
-        {
-            turnCost.FullRestore();
-        }
-
-        void _Subscribe_Events()
-        {
-            TurnController.OnTurnEnded += _OnTurnEnded;
-        }
-
-        void _Unsubscribe_Events()
-        {
-            TurnController.OnTurnEnded -= _OnTurnEnded;
         }
 
         void _FireEvent_OnTurnCostEmpty()

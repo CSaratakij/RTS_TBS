@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1112860821497472}
   m_IsPrefabParent: 1
+--- !u!1 &1003377468026260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4871580862293206}
+  - component: {fileID: 114939798063501106}
+  m_Layer: 0
+  m_Name: Stamina
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1112860821497472
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,9 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4858800776231050}
   - component: {fileID: 50474863839390700}
-  - component: {fileID: 114772477667069794}
   - component: {fileID: 114355806524905510}
-  - component: {fileID: 114883912429324468}
   - component: {fileID: 114092028319578082}
   - component: {fileID: 212095567878964366}
   - component: {fileID: 95998332188624598}
@@ -34,6 +48,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1800115285540364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4783474408121410}
+  - component: {fileID: 114184384707365176}
+  m_Layer: 0
+  m_Name: Health
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4783474408121410
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800115285540364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4858800776231050}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4858800776231050
 Transform:
   m_ObjectHideFlags: 1
@@ -43,9 +86,24 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.2, y: -2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4783474408121410}
+  - {fileID: 4871580862293206}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4871580862293206
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1003377468026260}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 419.61508, y: 180.7707, z: -1.8030595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4858800776231050}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50474863839390700
 Rigidbody2D:
@@ -111,6 +169,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveForce: 3
+--- !u!114 &114184384707365176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800115285540364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6475f88d49b724690755c222c499f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current: 100
+  maximum: 100
 --- !u!114 &114355806524905510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,14 +195,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTurn: 0
   turnStyle: 1
-  turnCost: {fileID: 114772477667069794}
-  health: {fileID: 114883912429324468}
---- !u!114 &114772477667069794
+  turnCost: {fileID: 114939798063501106}
+  health: {fileID: 114184384707365176}
+--- !u!114 &114939798063501106
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1112860821497472}
+  m_GameObject: {fileID: 1003377468026260}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f6475f88d49b724690755c222c499f5, type: 3}
@@ -139,19 +210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   current: 30
   maximum: 30
---- !u!114 &114883912429324468
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1112860821497472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f6475f88d49b724690755c222c499f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  current: 100
-  maximum: 100
 --- !u!212 &212095567878964366
 SpriteRenderer:
   m_ObjectHideFlags: 1

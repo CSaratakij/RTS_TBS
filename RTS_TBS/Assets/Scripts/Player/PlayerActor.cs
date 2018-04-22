@@ -23,7 +23,6 @@ namespace LD41
         protected override void Awake()
         {
             base.Awake();
-            turnCost = GetComponent<Status>();
             playerController = GetComponent<PlayerController>();
         }
 

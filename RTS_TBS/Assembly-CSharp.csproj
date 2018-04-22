@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Boss\BossActor.cs" />
-     <Compile Include="Assets\Scripts\Boss\BossController.cs" />
      <Compile Include="Assets\Scripts\Game\GameController.cs" />
      <Compile Include="Assets\Scripts\Game\GameState.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerActor.cs" />
@@ -65,6 +64,7 @@
      <Compile Include="Assets\Scripts\Turnbase\TurnStyle.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic.cs" />
      <Compile Include="Assets\Scripts\UI\View\GameMenuController.cs" />
+     <Compile Include="Assets\Scripts\UI\View\PanelInfoView.cs" />
      <Compile Include="Assets\Scripts\Utils\Timer.cs" />
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>

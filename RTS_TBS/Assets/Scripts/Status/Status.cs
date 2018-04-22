@@ -12,6 +12,7 @@ namespace LD41
 
 
         public float Current { get { return current; } }
+        public float Maximum { get { return maximum; } }
         public bool IsEmpty { get { return current <= 0; } } 
 
 
