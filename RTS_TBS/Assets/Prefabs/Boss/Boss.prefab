@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4421310302256174}
   - component: {fileID: 114006404355571012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stamina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,9 +38,10 @@ GameObject:
   - component: {fileID: 114146600186358622}
   - component: {fileID: 212722661327762630}
   - component: {fileID: 95432373423695590}
-  m_Layer: 0
+  - component: {fileID: 65573720739149990}
+  m_Layer: 8
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4769190616761500}
   - component: {fileID: 114478754677988896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,6 +103,18 @@ Transform:
   m_Father: {fileID: 4473933855837578}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65573720739149990
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211611828252844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5222936, y: 2.0930152, z: 0.2}
+  m_Center: {x: -0.06855327, y: 0.38085246, z: 0}
 --- !u!95 &95432373423695590
 Animator:
   serializedVersion: 3

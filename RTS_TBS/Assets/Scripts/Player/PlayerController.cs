@@ -13,12 +13,29 @@ namespace LD41
         [SerializeField]
         float dashForce;
 
+        [SerializeField]
+        float attackRange;
+
+        [SerializeField]
+        Transform hitOrigin;
+
+        [SerializeField]
+        Vector2 size;
+
+        [SerializeField]
+        LayerMask actorMask;
+
+
+        int hitCount;
 
         bool isWalk;
         bool isDash;
+        bool isInAttackRange;
 
         Vector2 inputVector;
         Animator anim;
+
+        Collider2D[] hits;
         Rigidbody2D rigid;
 
 
@@ -35,6 +52,9 @@ namespace LD41
 
         void FixedUpdate()
         {
+            hitCount = Physics2D.OverlapBoxNonAlloc(hitOrigin.position, size, 0.0f, hits, actorMask);
+            isInAttackRange = (hitCount > 0 && hits[0].CompareTag("Boss") && Vector2.Distance(hits[0].transform.position, transform.position) <= attackRange);
+
             _Movement_Handler();
         }
 
@@ -45,6 +65,7 @@ namespace LD41
 
         void _Initialize()
         {
+            hits = new Collider2D[1];
             inputVector = Vector2.zero;
             anim = GetComponent<Animator>();
             rigid = GetComponent<Rigidbody2D>();
@@ -63,6 +84,10 @@ namespace LD41
 
             if (Input.GetButtonDown("Attack")) {
                 anim.Play("Attack");
+
+                if (isInAttackRange) {
+                    Debug.Log("hit..");
+                }
             }
 
             if (Input.GetButtonDown("Dash")) {

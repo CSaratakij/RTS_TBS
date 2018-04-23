@@ -290,3 +290,4 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 429a28ce876cd02a7f01248a431ea763 Assembly-CSharp.dll:LD41.PanelInfoView
 f9f9a538886ea439d79fad37cfa8a821 Assembly-CSharp.dll:LD41.CurrentTurnActorView
 9e37a1388bc8747a1747ea6f49ddd951 Assembly-CSharp.dll:LD41.InGamePanelView
+360d382cd394c2a93ce6592f8b30f045 Assembly-CSharp.dll:LD41.AbilitySelectorView
