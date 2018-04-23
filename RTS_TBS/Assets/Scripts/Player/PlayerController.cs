@@ -12,9 +12,6 @@ namespace LD41
         float dashForce;
 
         [SerializeField]
-        float attackRange;
-
-        [SerializeField]
         Transform hitOrigin;
 
         [SerializeField]
@@ -50,11 +47,8 @@ namespace LD41
 
         void FixedUpdate()
         {
-            //Should change to raycast???
-/* public static int RaycastNonAlloc(Vector2 origin, Vector2 direction, RaycastHit2D[] results, float distance = Mathf.Infinity, int layerMask = DefaultRaycastLayers, float minDepth = -Mathf.Infinity, float maxDepth = Mathf.Infinity); */
-
             hitCount = Physics2D.OverlapBoxNonAlloc(hitOrigin.position, size, 0.0f, hits, actorMask);
-            isBossInAttackRange = (hitCount > 0 && hits[0].CompareTag("Boss") && Vector2.Distance(hits[0].transform.position, transform.position) <= attackRange);
+            isBossInAttackRange = (hitCount > 0 && hits[0].CompareTag("Boss"));
 
             _Movement_Handler();
         }

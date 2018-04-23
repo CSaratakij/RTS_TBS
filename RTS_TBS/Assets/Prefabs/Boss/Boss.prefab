@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1457577770565418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: -0.48, z: 0.021484375}
+  m_LocalPosition: {x: -0.04, y: 0.5, z: 0.021484375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4473933855837578}
@@ -144,7 +144,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00070023537, y: 0.59788823}
+  m_Offset: {x: -0.013105392, y: 0.83837557}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -155,7 +155,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.8770843, y: 3.0748973}
+  m_Size: {x: 4.0088434, y: 1.8872948}
   m_EdgeRadius: 0
 --- !u!95 &95432373423695590
 Animator:
@@ -205,10 +205,11 @@ MonoBehaviour:
   dashForce: 0
   attackRange: 1.2
   hitOrigin: {fileID: 4035404687059452}
-  size: {x: 4, y: 4}
+  size: {x: 3, y: 2}
   playerMask:
     serializedVersion: 2
     m_Bits: 512
+  beam: {fileID: 0}
 --- !u!114 &114478754677988896
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -31,6 +31,9 @@ namespace LD41
         [SerializeField]
         LayerMask playerMask;
 
+        [SerializeField]
+        BeamController beam;
+
 
         int hitCount;
         bool isPlayerInAttackRange;
@@ -63,7 +66,7 @@ namespace LD41
         void FixedUpdate()
         {
             hitCount = Physics2D.OverlapBoxNonAlloc(hitOrigin.position, size, 0.0f, hits, playerMask);
-            isPlayerInAttackRange = (hitCount > 0 && hits[0].CompareTag("Player") && Vector2.Distance(hits[0].transform.position, hitOrigin.position) <= attackRange);
+            isPlayerInAttackRange = (hitCount > 0 && hits[0].CompareTag("Player"));
         }
 
         protected override void OnDestroy()
@@ -132,14 +135,15 @@ namespace LD41
                 var player = hits[0].gameObject.GetComponent<PlayerActor>();
 
                 if (player) {
-                    player.RemoveHealth(5);
+                    player.RemoveHealth(8);
                 }
             }
         }
 
         public void AttackFar()
         {
-            //lauch someting toward player??
+            if (!beam) { return; }
+            beam.Use();
         }
     }
 }
