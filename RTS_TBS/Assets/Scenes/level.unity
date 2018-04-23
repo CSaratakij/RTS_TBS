@@ -823,7 +823,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004029751, y: 0.59788823}
+  m_Offset: {x: -0.00070023537, y: 0.59788823}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -834,7 +834,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.0777893, y: 3.0748973}
+  m_Size: {x: 4.8770843, y: 3.0748973}
   m_EdgeRadius: 0
 --- !u!114 &1347173468 stripped
 MonoBehaviour:
@@ -1080,6 +1080,26 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1058124374}
+    - target: {fileID: 224049245190518742, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 68.90039
+      objectReference: {fileID: 0}
+    - target: {fileID: 224519254807493722, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224060194872762294, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224249969835758482, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -118
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc, type: 2}
   m_IsPrefabParent: 0
@@ -1133,6 +1153,24 @@ Prefab:
     - target: {fileID: 4858800776231050, guid: b03ca4d6523d54548abdaacf1c05fa59, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461545073905320, guid: b03ca4d6523d54548abdaacf1c05fa59, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461545073905320, guid: b03ca4d6523d54548abdaacf1c05fa59, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 114092028319578082, guid: b03ca4d6523d54548abdaacf1c05fa59,
+        type: 2}
+      propertyPath: size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114092028319578082, guid: b03ca4d6523d54548abdaacf1c05fa59,
+        type: 2}
+      propertyPath: size.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b03ca4d6523d54548abdaacf1c05fa59, type: 2}

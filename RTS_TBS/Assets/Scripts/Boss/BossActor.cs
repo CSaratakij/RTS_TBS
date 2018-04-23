@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace LD41
 {
@@ -14,6 +15,9 @@ namespace LD41
 
         [SerializeField]
         Status health;
+
+
+        SpriteRenderer spriteRenderer;
 
 
         public BossActor()
@@ -44,6 +48,7 @@ namespace LD41
         void _Initialize()
         {
             Name = "Boss";
+            spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         void _Subscribe_Events()
@@ -63,9 +68,22 @@ namespace LD41
             }
         }
 
+        IEnumerator _GetHit_Callback()
+        {
+            yield return new WaitForSeconds(0.5f);
+            spriteRenderer.color = Color.white;
+        }
+
         public void RemoveTurnCost(int value)
         {
             turnCost.Remove(value);
+        }
+
+        public void RemoveHealth(int value)
+        {
+            health.Remove(value);
+            spriteRenderer.color = Color.red;
+            StartCoroutine(_GetHit_Callback());
         }
 
         public void Move(Transform target)

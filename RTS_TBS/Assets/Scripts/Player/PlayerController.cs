@@ -87,6 +87,13 @@ namespace LD41
 
                 if (isInAttackRange) {
                     Debug.Log("hit..");
+
+                    var boss = hits[0].gameObject.GetComponent<BossActor>();
+
+                    if (boss) {
+                        //Need to change to attack point..
+                        boss.RemoveHealth(20);
+                    }
                 }
             }
 
