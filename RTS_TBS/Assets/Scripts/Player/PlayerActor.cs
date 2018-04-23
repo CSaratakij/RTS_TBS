@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace LD41
 {
@@ -12,6 +13,9 @@ namespace LD41
 
         [SerializeField]
         Status health;
+
+
+        SpriteRenderer spriteRenderer;
 
 
         public PlayerActor()
@@ -68,6 +72,7 @@ namespace LD41
         void _Initialize()
         {
             Name = "Player";
+            spriteRenderer = GetComponent<SpriteRenderer>();
             playerController = GetComponent<PlayerController>();
         }
 
@@ -93,6 +98,19 @@ namespace LD41
             if (playerController.enabled != isTurn) {
                 playerController.enabled = isTurn;
             }
+        }
+
+        IEnumerator _GetHit_Callback()
+        {
+            yield return new WaitForSeconds(0.5f);
+            spriteRenderer.color = Color.white;
+        }
+
+        public void RemoveHealth(int value)
+        {
+            health.Remove(value);
+            spriteRenderer.color = Color.red;
+            StartCoroutine(_GetHit_Callback());
         }
     }
 }

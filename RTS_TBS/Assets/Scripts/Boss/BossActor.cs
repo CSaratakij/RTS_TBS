@@ -16,7 +16,27 @@ namespace LD41
         [SerializeField]
         Status health;
 
+        [SerializeField]
+        float dashForce;
 
+        [SerializeField]
+        float attackRange;
+
+        [SerializeField]
+        Transform hitOrigin;
+
+        [SerializeField]
+        Vector2 size;
+
+        [SerializeField]
+        LayerMask playerMask;
+
+
+        int hitCount;
+        bool isPlayerInAttackRange;
+
+        Collider2D[] hits;
+        Animator anim;
         SpriteRenderer spriteRenderer;
 
 
@@ -40,6 +60,12 @@ namespace LD41
             }
         }
 
+        void FixedUpdate()
+        {
+            hitCount = Physics2D.OverlapBoxNonAlloc(hitOrigin.position, size, 0.0f, hits, playerMask);
+            isPlayerInAttackRange = (hitCount > 0 && hits[0].CompareTag("Player") && Vector2.Distance(hits[0].transform.position, hitOrigin.position) <= attackRange);
+        }
+
         protected override void OnDestroy()
         {
             _Unsubscribe_Events();
@@ -48,6 +74,8 @@ namespace LD41
         void _Initialize()
         {
             Name = "Boss";
+            hits = new Collider2D[1];
+            anim = GetComponent<Animator>();
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
@@ -98,11 +126,15 @@ namespace LD41
 
         public void AttackNear()
         {
-            //play attack animation..
-            //and check if player is near..
-            //remove its health every hit..
-            //
-            //if player is not found -> display miss??
+            anim.Play("Slash");
+
+            if (isPlayerInAttackRange) {
+                var player = hits[0].gameObject.GetComponent<PlayerActor>();
+
+                if (player) {
+                    player.RemoveHealth(5);
+                }
+            }
         }
 
         public void AttackFar()

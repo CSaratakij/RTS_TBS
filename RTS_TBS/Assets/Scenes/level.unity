@@ -421,24 +421,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 1211611828252844, guid: 9ed3ce9d221f9804e9f1d9476b4612b1, type: 2}
-      propertyPath: m_TagString
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211611828252844, guid: 9ed3ce9d221f9804e9f1d9476b4612b1, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257175354906976, guid: 9ed3ce9d221f9804e9f1d9476b4612b1, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1010999111874146, guid: 9ed3ce9d221f9804e9f1d9476b4612b1, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65573720739149990, guid: 9ed3ce9d221f9804e9f1d9476b4612b1, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ed3ce9d221f9804e9f1d9476b4612b1, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &620782808 stripped
@@ -806,36 +789,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1194579608 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1211611828252844, guid: 9ed3ce9d221f9804e9f1d9476b4612b1,
-    type: 2}
-  m_PrefabInternal: {fileID: 605337835}
---- !u!61 &1194579610
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1194579608}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00070023537, y: 0.59788823}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 4.5}
-    newSize: {x: 5, y: 4.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.8770843, y: 3.0748973}
-  m_EdgeRadius: 0
 --- !u!114 &1347173468 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114396498584027548, guid: 110159960a404eb4fbe7066e429bfe0f,
@@ -1153,24 +1106,6 @@ Prefab:
     - target: {fileID: 4858800776231050, guid: b03ca4d6523d54548abdaacf1c05fa59, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461545073905320, guid: b03ca4d6523d54548abdaacf1c05fa59, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461545073905320, guid: b03ca4d6523d54548abdaacf1c05fa59, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 114092028319578082, guid: b03ca4d6523d54548abdaacf1c05fa59,
-        type: 2}
-      propertyPath: size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114092028319578082, guid: b03ca4d6523d54548abdaacf1c05fa59,
-        type: 2}
-      propertyPath: size.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b03ca4d6523d54548abdaacf1c05fa59, type: 2}
