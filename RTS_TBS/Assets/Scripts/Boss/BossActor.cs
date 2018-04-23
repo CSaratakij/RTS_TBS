@@ -4,8 +4,17 @@ namespace LD41
 {
     public class BossActor : TurnActor
     {
+        public const int ABILITY_SLASH_COST = 2;
+        public const int ABILITY_SHOOT_COST = 12;
+        public const int ABILITY_HEAL_COST = 4;
+        public const int ABILITY_MOVE_LEFT_COST = 1;
+        public const int ABILITY_MOVE_CENTER_COST = 1;
+        public const int ABILITY_MOVE_RIGHT_COST = 1;
+
+
         [SerializeField]
         Status health;
+
 
         public BossActor()
         {
@@ -61,7 +70,7 @@ namespace LD41
 
         public void Move(Transform target)
         {
-            //Move to that pos with lerp??
+            transform.position = target.position;
         }
 
         public void Heal(int value)

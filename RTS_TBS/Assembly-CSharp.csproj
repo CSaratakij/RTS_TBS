@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Turnbase\TurnState.cs" />
      <Compile Include="Assets\Scripts\Turnbase\TurnStyle.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic.cs" />
+     <Compile Include="Assets\Scripts\UI\View\Boss\AbilitySelectorView.cs" />
      <Compile Include="Assets\Scripts\UI\View\CurrentTurnActorView.cs" />
      <Compile Include="Assets\Scripts\UI\View\GameMenuController.cs" />
      <Compile Include="Assets\Scripts\UI\View\InGamePanelView.cs" />
