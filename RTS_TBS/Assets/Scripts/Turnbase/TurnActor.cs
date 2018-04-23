@@ -15,8 +15,9 @@ namespace LD41
         protected Status turnCost;
 
 
+        public string Name { get; set; }
+        public bool IsTurn { get { return isTurn; } }
         public Status TurnCost { get { return turnCost; } }
-
 
         public delegate void Func();
         public event Func OnTurnCostEmpty;

@@ -35,13 +35,7 @@ namespace LD41
 
         void FixedUpdate()
         {
-            if (isDash) {
-                rigid.AddForce(inputVector * dashForce, ForceMode2D.Impulse);
-                isDash = false;
-            }
-            else {
-                rigid.velocity = inputVector * moveForce;
-            }
+            _Movement_Handler();
         }
 
         void OnDisable()
@@ -79,6 +73,17 @@ namespace LD41
         void _Animation_Handler()
         {
             anim.SetBool("isWalk", isWalk);
+        }
+
+        void _Movement_Handler()
+        {
+            if (isDash) {
+                rigid.AddForce(inputVector * dashForce, ForceMode2D.Impulse);
+                isDash = false;
+            }
+            else {
+                rigid.velocity = inputVector * moveForce;
+            }
         }
 
         void _Reset()

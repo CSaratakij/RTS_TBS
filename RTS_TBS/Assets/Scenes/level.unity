@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
+  m_sendNavigationEvents: 0
   m_DragThreshold: 5
 --- !u!4 &703192337
 Transform:
@@ -518,6 +518,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &860340431 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1840193699929518, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1980243361}
+--- !u!114 &860340435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 860340431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0210075ed2f454684bd44951fa0102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: {fileID: 1058124374}
 --- !u!1 &962208869
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +978,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1895267801
+--- !u!1001 &1980243361
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1058,6 +1075,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114836688086973742, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+        type: 2}
+      propertyPath: actor
+      value: 
+      objectReference: {fileID: 1058124374}
+    - target: {fileID: 114551037187889650, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+        type: 2}
+      propertyPath: turnController
+      value: 
+      objectReference: {fileID: 620782808}
     - target: {fileID: 114398706143480472, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
         type: 2}
       propertyPath: health
@@ -1113,7 +1140,8 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1347173468}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114836688086973742, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2068598505

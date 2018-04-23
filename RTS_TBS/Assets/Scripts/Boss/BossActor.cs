@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace LD41
 {
@@ -14,11 +12,45 @@ namespace LD41
             turnStyle = TurnStyle.Turnbase;
         }
 
+        protected override void Awake()
+        {
+            base.Awake();
+            _Initialize();
+            _Subscribe_Events();
+        }
+
         protected override void Update()
         {
             base.Update();
             if (health.IsEmpty) {
                 GameController.GameOver();
+            }
+        }
+
+        protected override void OnDestroy()
+        {
+            _Unsubscribe_Events();
+        }
+
+        void _Initialize()
+        {
+            Name = "Boss";
+        }
+
+        void _Subscribe_Events()
+        {
+            TurnController.OnTurnStarted += _OnTurnStarted;
+        }
+        
+        void _Unsubscribe_Events()
+        {
+            TurnController.OnTurnStarted -= _OnTurnStarted;
+        }
+
+        void _OnTurnStarted()
+        {
+            if (isTurn) {
+                turnCost.FullRestore();
             }
         }
 

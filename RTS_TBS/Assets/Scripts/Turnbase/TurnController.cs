@@ -10,16 +10,17 @@ namespace LD41
         TurnActor[] actors;
 
 
+        public TurnActor CurrentActor { get { return actors[currentActorIndex]; } }
         public delegate void Func();
+        public static event Func OnTurnStarted;
         public static event Func OnTurnEnded;
 
 
-        uint currentActorIndex;
+        uint currentActorIndex = 0;
 
 
         void Awake()
         {
-            //Hook with game start/over...
             _Subscribe_Events();
         }
 
@@ -50,13 +51,20 @@ namespace LD41
 
         void _OnGameStart()
         {
-            //Test
-            actors[0].MakeTurn(true);
+            actors[currentActorIndex].MakeTurn(true);
+            _FireEvent_OnTurnStarted();
         }
 
         void _OnTurnCostEmpty()
         {
             EndCurrentTurn();
+        }
+
+        void _FireEvent_OnTurnStarted()
+        {
+            if (OnTurnStarted != null) {
+                OnTurnStarted();
+            }
         }
 
         void _FireEvent_OnTurnEnded()
@@ -65,18 +73,19 @@ namespace LD41
                 OnTurnEnded();
             }
         }
-        //
-        //move to next actor..(cycle..)
+
         void _CycleTurn()
         {
-
+            actors[currentActorIndex].MakeTurn(false);
+            currentActorIndex = ((currentActorIndex + 1) < actors.Length) ? (currentActorIndex + 1) : 0;
+            actors[currentActorIndex].MakeTurn(true);
         }
 
         public void EndCurrentTurn()
         {
-            //Todo..
             _FireEvent_OnTurnEnded();
             _CycleTurn();
+            _FireEvent_OnTurnStarted();
         }
     }
 }

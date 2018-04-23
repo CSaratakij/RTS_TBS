@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace LD41
 {
@@ -28,7 +26,8 @@ namespace LD41
         protected override void Awake()
         {
             base.Awake();
-            playerController = GetComponent<PlayerController>();
+            _Initialize();
+            _Subscribe_Events();
         }
 
         protected override void Update()
@@ -58,6 +57,34 @@ namespace LD41
 
             if (Input.GetButtonDown("Dash")) {
                 turnCost.Remove(DASH_TURN_COST);
+            }
+        }
+
+        protected override void OnDestroy()
+        {
+            _Unsubscribe_Events();
+        }
+
+        void _Initialize()
+        {
+            Name = "Player";
+            playerController = GetComponent<PlayerController>();
+        }
+
+        void _Subscribe_Events()
+        {
+            TurnController.OnTurnStarted += _OnTurnStarted;
+        }
+
+        void _Unsubscribe_Events()
+        {
+            TurnController.OnTurnStarted -= _OnTurnStarted;
+        }
+
+        void _OnTurnStarted()
+        {
+            if (isTurn) {
+                turnCost.FullRestore();
             }
         }
 
