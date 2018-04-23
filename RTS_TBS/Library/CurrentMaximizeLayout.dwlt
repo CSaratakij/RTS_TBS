@@ -19,10 +19,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 645
-  m_MinSize: {x: 681, y: 321}
-  m_MaxSize: {x: 12006, y: 8021}
+  m_MinSize: {x: 679, y: 321}
+  m_MaxSize: {x: 12004, y: 8021}
   vertical: 1
-  controlID: 50569
+  controlID: 51970
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,10 +121,10 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 645
-  m_MinSize: {x: 681, y: 321}
-  m_MaxSize: {x: 12006, y: 8021}
+  m_MinSize: {x: 679, y: 321}
+  m_MaxSize: {x: 12004, y: 8021}
   vertical: 0
-  controlID: 50570
+  controlID: 51971
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -179,9 +179,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4abe0100
-    m_LastClickedID: 114250
-    m_ExpandedIDs: b24ff3ff4850f3ff7252f3ff2e75f3ffcc75f3fff677f3ff8c72f4ff2273f4ff4c75f4ffe4f8f9ffee34faff8e35faffb637faffd0f9fffff6faffff82fbffff88fbffff9efbffff000000000c2b000042be000064be000092be000064bf0000f2bf000024c0000062c0000070c00000e08a0100aa8c0100dc8c01002a8d010000bc0100ccbc0100c0bd0100cabd01003cbe01004abe0100
+    m_SelectedIDs: e0c8ebff
+    m_LastClickedID: -1324832
+    m_ExpandedIDs: 8cd6ebff22d7ebff4cd9ebffb24ff3ff4850f3ff7252f3ff2e75f3ffcc75f3fff677f3ff8c72f4ff2273f4ff4c75f4ffe4f8f9ffee34faff8e35faffb637faffd0f9fffff6faffff82fbffff88fbffff9efbffff000000000c2b000042be000064be000092be000064bf0000f2bf000024c0000062c0000070c00000e08a0100aa8c0100dc8c01002a8d010000bc0100ccbc0100c0bd0100cabd01003cbe01004abe0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 321}
   m_MaxSize: {x: 4004, y: 8021}
   vertical: 1
-  controlID: 50515
+  controlID: 51972
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,7 +255,7 @@ MonoBehaviour:
   - {fileID: 9}
   - {fileID: 10}
   m_Selected: 1
-  m_LastSelected: 0
+  m_LastSelected: 2
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -284,14 +284,14 @@ MonoBehaviour:
     height: 473
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 72312.89396180848
+  lastFramingTime: 73749.64315548538
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 137.58406, y: 258.542, z: 11.686101}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 137.58406, y: 258.542, z: 11.686101}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -319,9 +319,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 368.37634
+    m_Target: 22
     speed: 2
-    m_Value: 368.37634
+    m_Value: 22
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -372,18 +372,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites/UI
+    - Assets/Scripts/Utils
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Sprites/UI
+  - Assets/Scripts/Utils
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\CSaratakij\Desktop\@GitRepository\RTS_TBS\RTS_TBS
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 124}
-    m_SelectedIDs: b2be0100
-    m_LastClickedID: 114354
+    scrollPos: {x: 0, y: 95}
+    m_SelectedIDs: 3a2a0000
+    m_LastClickedID: 10810
     m_ExpandedIDs: 000000005c2900006e2900008e290000ca290000042a0000162a0000502a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -437,8 +437,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c0bd0100
-    m_LastClickedInstanceID: 114112
+    m_SelectedInstanceIDs: e0c8ebff
+    m_LastClickedInstanceID: -1324832
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -665,8 +665,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 645
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}

@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\UI\View\GameWinnerView.cs" />
      <Compile Include="Assets\Scripts\UI\View\InGamePanelView.cs" />
      <Compile Include="Assets\Scripts\UI\View\PanelInfoView.cs" />
+     <Compile Include="Assets\Scripts\Utils\MarkSingleton.cs" />
      <Compile Include="Assets\Scripts\Utils\Timer.cs" />
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>

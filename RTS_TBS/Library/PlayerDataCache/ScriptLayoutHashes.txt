@@ -219,7 +219,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 6174d5ad096d06fb99853d648ebbf512 Assembly-CSharp.dll:LD41.Timer
-f9f9a538886ea439d79fad37cfa8a821 Assembly-CSharp.dll:LD41.CurrentTurnActorView
+2ca7905b3fad42b2638237d89a61abd8 Assembly-CSharp.dll:LD41.CurrentTurnActorView
 26215f135eeb48d8fa1189498c107f6c Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 2e0fd93f459db951da0e2e94e2e33fb7 Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -294,3 +294,4 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 480775240792f82bf863fba7e4a87a38 Assembly-CSharp.dll:LD41.BeamController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:LD41.Global
 f7640315ec92a12d676a3a684af275db Assembly-CSharp.dll:LD41.GameWinnerView
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:LD41.MarkSingleton
