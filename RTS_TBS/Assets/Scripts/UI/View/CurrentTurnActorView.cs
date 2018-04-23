@@ -14,6 +14,15 @@ namespace LD41
         [SerializeField]
         TurnController turnController;
 
+        [SerializeField]
+        RectTransform[] turnImages = new RectTransform[2];
+
+
+        enum TurnImage
+        {
+            Player,
+            Boss
+        }
 
         void Awake()
         {
@@ -37,7 +46,21 @@ namespace LD41
 
         void _OnTurnStarted()
         {
-            txtCurrentActor.text = string.Format(CURRENT_TURN_ACTOR_FORMAT, turnController.CurrentActor.Name); 
+            _Update_Text();
+            _Update_Image();
+        }
+
+        void _Update_Text()
+        {
+            string actorName = turnController.CurrentActor.Name;
+            txtCurrentActor.text = string.Format(CURRENT_TURN_ACTOR_FORMAT, actorName); 
+        }
+
+        void _Update_Image()
+        {
+            string actorName = turnController.CurrentActor.Name;
+            turnImages[(int)TurnImage.Player].gameObject.SetActive(actorName.Equals("Phillip"));
+            turnImages[(int)TurnImage.Boss].gameObject.SetActive(actorName.Equals("Josh"));
         }
     }
 }

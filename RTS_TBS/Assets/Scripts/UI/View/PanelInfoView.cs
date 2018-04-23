@@ -5,8 +5,8 @@ namespace LD41
 {
     public class PanelInfoView : MonoBehaviour
     {
-        const string HEALTH_FORMAT = "Health : {0} / {1}";
-        const string STAMINA_FORMAT = "Stamina : {0} / {1}";
+        const string HEALTH_FORMAT = "{0} / {1}";
+        const string STAMINA_FORMAT = "{0} / {1}";
 
 
         [SerializeField]
