@@ -84,7 +84,7 @@ namespace LD41
                     var boss = hits[0].gameObject.GetComponent<BossActor>();
 
                     if (boss) {
-                        boss.RemoveHealth(12);
+                        boss.RemoveHealth(11);
                     }
                 }
             }

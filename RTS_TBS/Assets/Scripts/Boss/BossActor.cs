@@ -7,7 +7,7 @@ namespace LD41
     {
         public const int ABILITY_SLASH_COST = 2;
         public const int ABILITY_SHOOT_COST = 5;
-        public const int ABILITY_HEAL_COST = 6;
+        public const int ABILITY_HEAL_COST = 7;
         public const int ABILITY_MOVE_LEFT_COST = 1;
         public const int ABILITY_MOVE_CENTER_COST = 1;
         public const int ABILITY_MOVE_RIGHT_COST = 1;

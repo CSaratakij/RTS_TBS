@@ -1166,20 +1166,35 @@ Prefab:
       propertyPath: turnController
       value: 
       objectReference: {fileID: 620782808}
-    - target: {fileID: 114965302018038734, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+    - target: {fileID: 114846463745991136, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 5
+      propertyPath: m_Text
+      value: Slash (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 114731999779526976, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+    - target: {fileID: 114817060393986372, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 6
+      propertyPath: m_Text
+      value: Shoot (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 114731999779526976, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+    - target: {fileID: 114061615644901736, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 20
+      propertyPath: m_Text
+      value: Heal (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114676539650307838, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+        type: 2}
+      propertyPath: m_Text
+      value: Left (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114717515177590532, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+        type: 2}
+      propertyPath: m_Text
+      value: Center (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114121097149753832, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc,
+        type: 2}
+      propertyPath: m_Text
+      value: Right (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3504cf2d51e92a4ab1e35ab2f0be5dc, type: 2}
