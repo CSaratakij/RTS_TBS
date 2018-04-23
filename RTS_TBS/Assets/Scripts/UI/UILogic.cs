@@ -17,6 +17,7 @@ namespace LD41
 
         public void Restart()
         {
+            Global.Clear();
             var currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.name);
         }

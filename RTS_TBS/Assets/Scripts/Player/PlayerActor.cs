@@ -71,19 +71,28 @@ namespace LD41
 
         void _Initialize()
         {
-            Name = "Player";
+            Name = "Phillip";
             spriteRenderer = GetComponent<SpriteRenderer>();
             playerController = GetComponent<PlayerController>();
         }
 
         void _Subscribe_Events()
         {
+            GameController.OnGameOver += _OnGameOver;
             TurnController.OnTurnStarted += _OnTurnStarted;
         }
 
         void _Unsubscribe_Events()
         {
+            GameController.OnGameOver -= _OnGameOver;
             TurnController.OnTurnStarted -= _OnTurnStarted;
+        }
+
+        void _OnGameOver()
+        {
+            if (!health.IsEmpty) {
+                Global.info.winner = this;
+            }
         }
 
         void _OnTurnStarted()

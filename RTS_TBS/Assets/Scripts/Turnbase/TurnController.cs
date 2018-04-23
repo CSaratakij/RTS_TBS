@@ -31,7 +31,6 @@ namespace LD41
 
         void _Subscribe_Events()
         {
-            //GameController hook here..
             GameController.OnGameStart += _OnGameStart;
 
             foreach (TurnActor actor in actors) {
@@ -41,7 +40,6 @@ namespace LD41
 
         void _Unsubscribe_Events()
         {
-            //GameController hook here..
             GameController.OnGameStart -= _OnGameStart;
 
             foreach (TurnActor actor in actors) {

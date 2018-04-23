@@ -7,7 +7,7 @@ namespace LD41
     {
         //Hacks
         [SerializeField]
-        Status playerHealth;
+        PlayerActor player;
 
         [SerializeField]
         Transform target;
@@ -43,8 +43,8 @@ namespace LD41
         public void Use(Vector2 target, Vector2 offset)
         {
             //Hacks
-            if (playerHealth) {
-                playerHealth.Remove(40);
+            if (player) {
+                player.RemoveHealth(14);
             }
 
             groundBeam.position = target + offset;

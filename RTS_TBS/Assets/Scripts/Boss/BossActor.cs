@@ -6,8 +6,8 @@ namespace LD41
     public class BossActor : TurnActor
     {
         public const int ABILITY_SLASH_COST = 2;
-        public const int ABILITY_SHOOT_COST = 12;
-        public const int ABILITY_HEAL_COST = 4;
+        public const int ABILITY_SHOOT_COST = 5;
+        public const int ABILITY_HEAL_COST = 6;
         public const int ABILITY_MOVE_LEFT_COST = 1;
         public const int ABILITY_MOVE_CENTER_COST = 1;
         public const int ABILITY_MOVE_RIGHT_COST = 1;
@@ -76,7 +76,7 @@ namespace LD41
 
         void _Initialize()
         {
-            Name = "Boss";
+            Name = "Josh";
             hits = new Collider2D[1];
             anim = GetComponent<Animator>();
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -84,12 +84,21 @@ namespace LD41
 
         void _Subscribe_Events()
         {
+            GameController.OnGameOver += _OnGameOver;
             TurnController.OnTurnStarted += _OnTurnStarted;
         }
         
         void _Unsubscribe_Events()
         {
+            GameController.OnGameOver -= _OnGameOver;
             TurnController.OnTurnStarted -= _OnTurnStarted;
+        }
+
+        void _OnGameOver()
+        {
+            if (!health.IsEmpty) {
+                Global.info.winner = this;
+            }
         }
 
         void _OnTurnStarted()

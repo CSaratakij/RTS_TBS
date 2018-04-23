@@ -84,8 +84,7 @@ namespace LD41
                     var boss = hits[0].gameObject.GetComponent<BossActor>();
 
                     if (boss) {
-                        //Need to change to attack point..
-                        boss.RemoveHealth(15);
+                        boss.RemoveHealth(12);
                     }
                 }
             }

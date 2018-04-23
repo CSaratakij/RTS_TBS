@@ -6,7 +6,6 @@
         public static event Func OnGameStart;
         public static event Func OnGameOver;
 
-
         static bool isGameStart;
         static bool isGameOver = false;
 

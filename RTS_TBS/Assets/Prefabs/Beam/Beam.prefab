@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1590e31ad28c1f04d80f761a0ec94594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  player: {fileID: 0}
   target: {fileID: 0}
   offset: {x: 0, y: -1}
   groundBeam: {fileID: 0}

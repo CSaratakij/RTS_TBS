@@ -54,7 +54,9 @@
      <Compile Include="Assets\Scripts\Beam\BeamController.cs" />
      <Compile Include="Assets\Scripts\Boss\BossActor.cs" />
      <Compile Include="Assets\Scripts\Game\GameController.cs" />
+     <Compile Include="Assets\Scripts\Game\GameInfo.cs" />
      <Compile Include="Assets\Scripts\Game\GameState.cs" />
+     <Compile Include="Assets\Scripts\Global\Global.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerActor.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Status\IStatus.cs" />
@@ -67,6 +69,7 @@
      <Compile Include="Assets\Scripts\UI\View\Boss\AbilitySelectorView.cs" />
      <Compile Include="Assets\Scripts\UI\View\CurrentTurnActorView.cs" />
      <Compile Include="Assets\Scripts\UI\View\GameMenuController.cs" />
+     <Compile Include="Assets\Scripts\UI\View\GameWinnerView.cs" />
      <Compile Include="Assets\Scripts\UI\View\InGamePanelView.cs" />
      <Compile Include="Assets\Scripts\UI\View\PanelInfoView.cs" />
      <Compile Include="Assets\Scripts\Utils\Timer.cs" />
